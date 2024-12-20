@@ -12,6 +12,11 @@ const AppMenu = () => {
 
     const model: AppMenuItem[] = [
         {
+            label: 'Menu',
+            items: [{ label: 'Currency Converter', icon: 'pi pi-fw pi-dollar', to: '/currency' }]
+        },
+
+        {
             label: 'Templates',
             items: [
                 {
