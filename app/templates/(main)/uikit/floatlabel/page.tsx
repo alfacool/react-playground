@@ -43,7 +43,7 @@ const FloatLabelDemo = () => {
     }, []);
 
     const searchCountry = (event: AutoCompleteCompleteEvent) => {
-        const filtered = [];
+        const filtered: any[] = [];
         const query = event.query;
         for (let i = 0; i < countries.length; i++) {
             const country = countries[i];

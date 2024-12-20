@@ -45,7 +45,7 @@ const InvalidStateDemo = () => {
     const searchCountry = (event: AutoCompleteCompleteEvent) => {
         // in a real application, make a request to a remote url with the query and
         // return filtered results, for demo we filter at client side
-        const filtered = [];
+        const filtered: any[] = [];
         const query = event.query;
         for (let i = 0; i < countries.length; i++) {
             const country = countries[i];
