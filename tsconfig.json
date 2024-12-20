@@ -19,6 +19,7 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "incremental": true,
+        "noImplicitAny": false,
         "plugins": [
             {
                 "name": "next"
@@ -34,13 +35,17 @@
             "@layout/*": [
                 "layout/*"
             ],
+            "@services/*": [
+                "services/*"
+            ],
         }
     },
     "include": [
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        ".next/types/**/*.ts"
+        ".next/types/**/*.ts",
+        "build/types/**/*.ts"
     ],
     "exclude": [
         "node_modules"
