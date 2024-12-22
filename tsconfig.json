@@ -38,6 +38,12 @@
             "@services/*": [
                 "services/*"
             ],
+            "@interfaces/*": [
+                "types/*"
+            ],
+            "@redux/*": [
+                "redux/*"
+            ],
         }
     },
     "include": [
