@@ -52,7 +52,7 @@ export const getOptRatesData = createSelector(
         countryData.forEach((currency: Country) => {
             let name = Object.keys(currency.currencies)[0];
             var index = ratesData.findIndex((element) => element.name == name);
-            if (index != -1) optRates[index] = { ...ratesData[index], full_name: currency.currencies[name].name, symbol: currency.currencies[name].symbol };
+            if (index != -1) optRates[index] = { ...optRates[index], full_name: currency.currencies[name].name, symbol: currency.currencies[name].symbol };
         });
         return optRates;
     }
