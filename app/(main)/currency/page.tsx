@@ -7,6 +7,7 @@ import { AmountInput } from './components/AmountInput';
 import { CodeSelector } from './components/CodeSelector';
 import { ConvertButton } from './components/ConvertButton';
 import { ResultField } from './components/ResultField';
+import { RatesTable } from './components/RatesTable';
 import type { Currency, Country } from '@interfaces/currency';
 
 const CurrencyConverter = () => {
@@ -66,11 +67,21 @@ const CurrencyConverter = () => {
                         </div>
                     </div>
                     {convert ? (
-                        <div className="grid">
-                            <div className="col">
-                                Result : <ResultField amount={amount} from={countryFrom} to={countryTo} />
+                        <>
+                            <div className="grid">
+                                <div className="col">
+                                    Result : <ResultField amount={amount} from={countryFrom} to={countryTo} />
+                                </div>
                             </div>
-                        </div>
+                            <div className="grid">
+                                <div className="col-12">
+                                    <h5> Result in Other Currencies</h5>
+                                </div>
+                                <div className="col-12">
+                                    <RatesTable amount={amount} rates={ratesData} from={countryFrom}></RatesTable>
+                                </div>
+                            </div>
+                        </>
                     ) : null}
                 </div>
             </div>
